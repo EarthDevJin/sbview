@@ -1,5 +1,5 @@
 // Telo Dashboard - Modern UI (Updated Version)
-let supabase = null;
+let supabaseClient = null;
 let currentUser = null;
 let chartInstance = null;
 
@@ -9,10 +9,10 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 // Initialize Supabase client
 function initSupabase() {
-    if (!supabase) {
-        supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    if (!supabaseClient) {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     }
-    return supabase;
+    return supabaseClient;
 }
 
 // DOM Elements
